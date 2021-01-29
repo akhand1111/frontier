@@ -4,15 +4,15 @@ language: cpp
 dist: focal
 arch:
   - amd64
-  - arm64
+  - arm64-graviton2
+virt: lxd
+group: edge
 osx_image: xcode11.6
 
 matrix:
   exclude:
     - os: linux
       compiler: clang
-    - os: osx
-      arch: arm64
 
 addons:
   apt:
@@ -52,5 +52,4 @@ compiler:
 
 os:
   - linux
-  - osx
 
